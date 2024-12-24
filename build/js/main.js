@@ -20,5 +20,17 @@ secondData.c = [true, "1"];
 const newFun = (paramData) => {
     return 0;
 };
-;
 let interfaceData = { a: 5, b: 5, c: [true, "1"] };
+// Function in Type Script
+const function1 = (value) => {
+    console.log(`This is function 1 with parameter:${value}`);
+};
+// console.log(function1(5))
+const function2 = (a, b = 2) => {
+    return [a, b];
+};
+// console.log(function2(5));
+const function3 = (message, never) => {
+    throw new Error(message);
+};
+function3("Something went wrong!");

@@ -34,10 +34,26 @@ const newFun = (paramData: data) => {
 
 // declare an object type using interface keyword. This is almost same as type keyword but this type name will be assiged without "=" sign
 
-interface dataIn  {
-    a: number;
-    b: number;
-    c?: (boolean | string)[];
-  };
+interface dataIn {
+  a: number;
+  b: number;
+  c?: (boolean | string)[];
+}
 
-let interfaceData:dataIn = { a: 5, b: 5, c: [true, "1"] };
+let interfaceData: dataIn = { a: 5, b: 5, c: [true, "1"] };
+
+// Function in Type Script
+
+const function1 = (value: number): void => {
+  console.log(`This is function 1 with parameter:${value}`);
+};
+// console.log(function1(5))
+const function2 = (a: number, b: number = 2): number => {
+  return [a, b];
+};
+// console.log(function2(5));
+
+const function3 = (message: string: never => {
+  throw new Error(message);
+};
+function3("Something went wrong!");
